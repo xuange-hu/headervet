@@ -45,7 +45,8 @@ def test_mcp_import_is_deferred_into_build_server():
 
 
 def test_build_server_registers_exactly_the_documented_tools():
-    mcp = ms.build_server()  # requires the `mcp` extra
+    pytest.importorskip("mcp", reason="the `mcp` optional extra is not installed")
+    mcp = ms.build_server()
     tools = asyncio.run(mcp.list_tools())
     assert {t.name for t in tools} == set(ms.TOOLS)
     for t in tools:
@@ -53,6 +54,7 @@ def test_build_server_registers_exactly_the_documented_tools():
 
 
 def test_tool_signatures_use_simple_json_types():
+    pytest.importorskip("mcp", reason="the `mcp` optional extra is not installed")
     mcp = ms.build_server()
     tools = asyncio.run(mcp.list_tools())
     for t in tools:
