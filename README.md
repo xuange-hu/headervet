@@ -15,6 +15,18 @@ live URLs — 36 rules, zero dependencies, SARIF for CI, MCP server.
 uvx --from "git+https://github.com/xuange-hu/headervet" headervet demo
 ```
 
+## Contents
+
+- [Why another header checker](#why-another-header-checker)
+- [3-step start](#3-step-start)
+- [What it reads](#what-it-reads)
+- [CI gate + SARIF](#ci-gate--sarif)
+- [MCP server (Claude Code / Cursor / Cline)](#mcp-server-claude-code--cursor--cline)
+- [Rules](#rules)
+- [Design notes](#design-notes)
+- [Status](#status)
+- [License](#license)
+
 ## Why another header checker
 
 Online scanners (securityheaders.com and friends) grade **one response**.

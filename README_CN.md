@@ -15,6 +15,18 @@ English: [README.md](README.md)
 uvx --from "git+https://github.com/xuange-hu/headervet" headervet demo
 ```
 
+## 目录
+
+- [为什么还要一个响应头检查器](#为什么还要一个响应头检查器)
+- [三步上手](#三步上手)
+- [认哪些输入](#认哪些输入)
+- [CI 门禁 + SARIF](#ci-门禁--sarif)
+- [MCP server（Claude Code / Cursor / Cline）](#mcp-serverclaude-code--cursor--cline)
+- [规则](#规则)
+- [设计要点](#设计要点)
+- [状态](#状态)
+- [许可](#许可)
+
 ## 为什么还要一个响应头检查器
 
 在线扫描器（securityheaders.com 之类）只给**一个响应**打分。真正在线上出事的
