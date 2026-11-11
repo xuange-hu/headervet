@@ -1,7 +1,7 @@
 # headervet
 
 [![CI](https://github.com/xuange-hu/headervet/actions/workflows/ci.yml/badge.svg)](https://github.com/xuange-hu/headervet/actions/workflows/ci.yml)
-![tests-130%20passing](https://img.shields.io/badge/tests-130%20passing-brightgreen)
+![tests-132%20passing](https://img.shields.io/badge/tests-132%20passing-brightgreen)
 ![dependencies-0](https://img.shields.io/badge/dependencies-0-blue)
 ![license-MIT](https://img.shields.io/badge/license-MIT-lightgrey)
 
@@ -130,7 +130,7 @@ Full list with why/fix: `headervet rules --json` or `headervet explain HDV201`.
 
 ## Status
 
-v0.1.0 — 36 rules, 130 tests, ruff clean, CI on 3.10–3.13.
+v0.1.0 — 36 rules, 132 tests, ruff clean, CI on 3.10–3.13.
 Roadmap: HAR input, `more_set_headers` (OpenResty), Traefik labels,
 CSP hash computation, per-route frame-ancestors coverage.
 

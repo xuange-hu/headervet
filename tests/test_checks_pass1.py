@@ -152,3 +152,17 @@ def test_findings_carry_snippet_and_line():
     block, _ = _dump("HTTP/1.1 200 OK\nReferrer-Policy: unsafe-url\n")
     f = next(f for f in check_block(block, "d") if f.rule.id == "HDV014")
     assert f.line == 2 and "unsafe-url" in f.snippet
+
+def test_missing_referrer_policy_and_permissions_policy():
+    block, _ = _dump("HTTP/1.1 200 OK\n")
+    ids = {f.rule.id for f in check_block(block, "d")}
+    assert "HDV013" in ids and "HDV015" in ids
+
+
+def test_present_privacy_policies_clear_their_rules():
+    block, _ = _dump(
+        "HTTP/1.1 200 OK\nReferrer-Policy: strict-origin\n"
+        "Permissions-Policy: camera=()\n"
+    )
+    ids = {f.rule.id for f in check_block(block, "d")}
+    assert "HDV013" not in ids and "HDV015" not in ids
