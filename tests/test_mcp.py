@@ -8,13 +8,12 @@ import pytest
 
 from headervet import mcp_server
 
-pytest.importorskip("mcp")
-
 
 def test_served_tools_match_manifest_with_descriptions():
     """The names an agent calls must be the names the manifest promises, and
     FastMCP serves an empty description when the registered function has no
     docstring - an unidentified tool is an uncallable tool."""
+    pytest.importorskip("mcp")
     server = mcp_server.build_server()
     tools = asyncio.run(server.list_tools())
     served = {t.name for t in tools}
@@ -26,4 +25,5 @@ def test_served_tools_match_manifest_with_descriptions():
 
 def test_served_names_are_the_documented_ones():
     """Agents are configured against these names; renaming breaks them."""
+    pytest.importorskip("mcp")
     assert {t["name"] for t in mcp_server.tool_manifest()} == set(mcp_server.TOOLS)
