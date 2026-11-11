@@ -1,7 +1,7 @@
 # headervet
 
 [![CI](https://github.com/xuange-hu/headervet/actions/workflows/ci.yml/badge.svg)](https://github.com/xuange-hu/headervet/actions/workflows/ci.yml)
-![tests-132%20passing](https://img.shields.io/badge/tests-132%20passing-brightgreen)
+![tests-134%20passing](https://img.shields.io/badge/tests-134%20passing-brightgreen)
 ![dependencies-0](https://img.shields.io/badge/dependencies-0-blue)
 ![license-MIT](https://img.shields.io/badge/license-MIT-lightgrey)
 
